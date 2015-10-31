@@ -31,8 +31,6 @@ public class AppTest
 	
 	private String filename;
 	
-	private BufferedReader field = null;
-	private BufferedReader script = null;
 	private BufferedReader output = null;
 	 
 	private final ByteArrayOutputStream outStream = new ByteArrayOutputStream();
@@ -44,10 +42,6 @@ public class AppTest
 	@Before
 	public void setup()
 	{
-		field = new BufferedReader(
-	            new InputStreamReader(getClass().getResourceAsStream("/fields/" + filename + ".txt")));
-		script = new BufferedReader(
-	            new InputStreamReader(getClass().getResourceAsStream("/scripts/" + filename + ".txt")));
 		output = new BufferedReader(
 	            new InputStreamReader(getClass().getResourceAsStream("/output/" + filename + ".txt")));
 		
@@ -57,16 +51,6 @@ public class AppTest
 	@After
     public void teardown() throws IOException
     {
-        if (field != null) {
-        	field.close();
-        }
-        field = null;
-        
-        if (script != null) {
-        	script.close();
-        }
-        script = null;
-        
         if (output != null) {
         	output.close();
         }
