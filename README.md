@@ -4,7 +4,7 @@
 * Author: Matt S.
 
 ## Requirements
-* Java 1.8 or above
+* Java 8 or above
 * Maven 2.2.1 or above
 
 ## Usage
